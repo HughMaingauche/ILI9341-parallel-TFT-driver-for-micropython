@@ -1,11 +1,11 @@
 # ILI9341-parallel-TFT-driver-for-micropython
-For use with an 8-bit parallel TFT touchscreen using micropython. Many thanhs to the MCUFriend TFT library, written in C code and from which I derived this micropython driver.
-Thank you also to Roberthh on the micropython forum for all his very instructive posts about the use of the micropython viper decorator. This helped me much !
+For use with an 8-bit parallel TFT touchscreen using micropython. Many thanks to prenticedavid and his [MCUFriend TFT library](https://github.com/prenticedavid/MCUFRIEND_kbv), written in C code and from which I derived this micropython driver.
+Thank you also to Roberthh on the [micropython forum](https://forum.micropython.org/viewtopic.php?f=14&t=10986) for all his very instructive posts about the use of the micropython viper decorator. This helped me much !
 
 
-You'll find 2 different ILI9341 drivers for micropython in this repository :
-ILI9341_ESP32 -> for use with standard ESP32 microcontroller 
-ILI9341_RP2 -> for use with Raspberry PICO microcontroller
+You'll find 2 different ILI9341 drivers for micropython in this repository :<br/>
+ILI9341_ESP32 -> for use with standard ESP32 microcontroller<br/>
+ILI9341_RP2 -> for use with Raspberry PICO microcontroller<br/>
 
 For the ESP32, it's working well but I sometime have memory issues, in this case use of gc.collect() might be usefull
 
