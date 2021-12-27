@@ -91,7 +91,8 @@ Except for the RS and CS pins, you can choose any I/O pin, but be aware that to 
 
 ## 4. Touchsceen calibration procedure
 
-Once you have loaded the "main_full_test_LCD_TOUCH.py" file, after a few tests you'll see on screen the calibration procédure. Once it is complete you'll find the results giving a set of parameters:
+Once you have loaded the "main_full_test_LCD_TOUCH.py" file, after a few tests you'll see on screen the calibration procédure. It is a basic set of green crosses you have to touch and when it's done calcultations are made to interpolate the x and y position with the ADC values.
+Once it is complete you'll find the results giving a set of parameters:
 ```
 Cal. result : Pos(pixel) = a * ADC_val + b
 
@@ -103,3 +104,43 @@ Long direction  ->  a = 0.006892291
 
 Touch anywhere to test !
 ```
+What you have to do is copy these paramters in the ILI9341_touch.py library :
+
+ self.coeff_short = results above for Short direction a
+ self.const_short = results above for Short direction b
+ self.coeff_long = results above for Long direction a
+ self.const_long = results above for Long direction b
+ 
+ and that's it !
+ 
+ ## 5. Using the routines
+ 
+ ### 5.1 Display routines
+ 
+ Once you've declared your "screen" class object using ```tft=ILI9341.screen(LCD_RD,LCD_WR,LCD_RS,LCD_CS,LCD_RST,LCD_D0,LCD_D1,LCD_D2,LCD_D3,LCD_D4,LCD_D5,LCD_D6,LCD_D7)```
+ 
+the following commands are availabe :
+
+tft.begin() : You have to start with this one, this initiates and resets the display
+tft.fillscreen(Color : Fill the entire screen with the corresponding color (16-bit color value)
+tft.setrotation(0) : 0 an 2 are portrait mode, 1 and 3 are landscape mode
+tft.fillRect(start x,start y, width, height ,color) : Draw a filled rectangle
+tft.drawFastVLine(start x,start y, length, color) : Draw a vertical line
+tft.drawFastHLine(start x,start y, length, color) : Draw an horizontal line
+tft.drawLine(start x,start y, end x, end y, color) : Draw any other type of line
+tft.drawPixel(x, y, color) : Draw a Pixel
+tft.drawCircle(x, y, r, color) : Draw a circle, x,y = center position, r = radius in pixels
+tft.fillDisk(x, y, r, color) : Draw a completely filled disk x,y = center position, r = radius in pixels
+tft.drawDisk(x, y, y, r1, r2, color) : Draw a ring x,y = center position, r1 = inner radius in pixels, r2 = outer radius in pixels
+
+tft.SetFont(i) : i 1 or 2 or 3 at the moment since only 3 fonts are available - A font MUST BE SET in order to use the following text features
+tft.setTextColor(color) : Sets the characters color (16-bit value)
+tft.setTextCursor(x,y) : Position the text cursor at the desired value - This position is the lowest-left pixel to start character printing
+tft.printh(String) : Print the string, add a "\n" character at the end for linefeed
+tft.prints(String) : Same as printh, but with a very cool scrolling additional feature ! (see example)
+
+### 5.2 Touch routines
+
+Once you've declared your "screen" class object using ```ts = ILI9341_touch.touchscreen(XP, YP, XM, YM) ```
+ 
+the following commands are availabe :
