@@ -46,9 +46,9 @@ sdcard.py : Library to use for SD card access (The ILI9341 parallel display has 
 
 SdcardTimerTest.py : An example to set and display the time and print on screen the content of the SDcard
 
-###3. How to use :
-
 All the examples above start by setting the pins connected to the display (and if needed to the SD card pins) :
+
+## 3. Pin definition
 
 ### 3.1 Pin definition for the LCD display
 LCD_RD = 2
@@ -88,3 +88,18 @@ YP = LCD_CS   #  Please note that CS and RS are the same as for the display abov
 XM = LCD_RS   #
 
 Except for the RS and CS pins, you can choose any I/O pin, but be aware that to use the SDcard you will need an available SPI, so save at least one set of SPI pins for this !
+
+## 4. Touchsceen calibration procedure
+
+Once you have loaded the "main_full_test_LCD_TOUCH.py" file, after a few tests you'll see on screen the calibration procédure. Once it is complete you'll find the results giving a set of parameters:
+```
+Cal. result : Pos(pixel) = a * ADC_val + b
+
+Short direction ->  a = -0.005244441
+                    b = 292.7332
+
+Long direction  ->  a = 0.006892291
+                    b = -72.781
+
+Touch anywhere to test !
+```
