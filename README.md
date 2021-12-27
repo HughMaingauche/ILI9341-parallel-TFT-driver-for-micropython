@@ -121,8 +121,8 @@ What you have to do is copy these paramters in the ILI9341_touch.py library :
  
 the following commands are availabe :
 
-tft.begin() : You have to start with this one, this initiates and resets the display
-tft.fillscreen(Color : Fill the entire screen with the corresponding color (16-bit color value)
+ tft.begin() : You have to start with this one, this initiates and resets the display
+ tft.fillscreen(Color : Fill the entire screen with the corresponding color (16-bit color value)
 tft.setrotation(0) : 0 an 2 are portrait mode, 1 and 3 are landscape mode
 tft.fillRect(start x,start y, width, height ,color) : Draw a filled rectangle
 tft.drawFastVLine(start x,start y, length, color) : Draw a vertical line
