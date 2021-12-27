@@ -21,9 +21,10 @@ The libraries use micropython_viper decorator to improve speed and achieve reaso
 
 ## How to use the files in the repository :
 
-1. After installing micropython on your device, copy the full content of the corresponding folder to the root directory (using Thonny, Rshell or wathever software you usually use)
+###1. After installing micropython on your device:
+copy the full content of the corresponding folder to the root directory (using Thonny, Rshell or wathever software you usually use)
 
-2. Short description of the files :
+###2. Short description of the files :
 
 ILI9341.py : Main LCD display library, must be imported in full in the py program in order to use all the features, from this library you can declare a "screen" class object
 
@@ -45,11 +46,11 @@ sdcard.py : Library to use for SD card access (The ILI9341 parallel display has 
 
 SdcardTimerTest.py : An example to set and display the time and print on screen the content of the SDcard
 
-3. How to use :
+###3. How to use :
 
 All the examples above start by setting the pins connected to the display (and if needed to the SD card pins) :
 
-3.1 Pin definition for the LCD display
+###3.1 Pin definition for the LCD display
 LCD_RD = 2
 
 LCD_WR = 4
@@ -76,7 +77,7 @@ LCD_D6 = 27
 
 LCD_D7 = 14
 
-3.2 Pin definition for the touchscreen
+###3.2 Pin definition for the touchscreen
 
 XP = LCD_D0   #
 
