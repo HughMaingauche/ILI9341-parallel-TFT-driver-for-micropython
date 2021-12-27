@@ -126,7 +126,9 @@ tft.prints(String) : Same as printh, but with a very cool scrolling additional f
 Once you've declared your "screen" class object using ```ts = ILI9341_touch.touchscreen(XP, YP, XM, YM) ```
  
 the following commands are availabe :
-ts.Pin_reset() : This is an important function. in every methods you want to implement, you have to do this reset before every call to a tft (display) routine (remember: CS and RS Pins are shared between the LCD display and the touchscreen interface, if the pins are not reset the screen functions will not work).<br/>
+ts.Pin_reset() :<br/>
+This is an important function. in every methods you want to implement, you have to do this reset before every call to a tft (display) routine (remember: CS and RS Pins are shared between the LCD display and the touchscreen interface, if the pins are not reset the screen functions will not work).<br/>
+
 ts.pressure() : Return a value corresponding to the pressing strength - Mostly used to detect a touch <br/>
 ts.getPoint() : Return the (x,y) position of the touch (provided the touchscreen has been correctly calibrated, see #4) <br/>
 ts.Point_Listen() : Use with care, this loop returns the (x,y) touch value after the user has stopped touching (when removing the pencil). Used in the calibration function if you want to see it working.<br/>
