@@ -19,7 +19,7 @@ These libraries include 3 different fonts.
 
 The libraries use micropython_viper decorator to improve speed and achieve reasonable graphic display speed
 
-**How to use the files in the repository :**
+##How to use the files in the repository :
 
 1. After installing micropython on your device, copy the full content of the corresponding folder to the root directory (using Thonny, Rshell or wathever software you usually use)
 
