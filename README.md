@@ -28,27 +28,22 @@ copy the full content of the corresponding folder to the root directory (using T
 
 ### 2. Short description of the files :
 
-ILI9341.py : Main LCD display library, must be imported in full in the py program in order to use all the features, from this library you can declare a "screen" class object
-
-ILI9341_touch.py : Touchscreen library, must be imported if you need to use the touch feature of the display, from this library you can declare a "touchscreen" class object
+ILI9341.py : Main LCD display library, must be imported in full in the py program in order to use all the features, from this library you can declare a "screen" class object<br/>
+ILI9341_touch.py : Touchscreen library, must be imported if you need to use the touch feature of the display, from this library you can declare a "touchscreen" class object<br/>
 
 ILI9341_char.py : Used to draw characters from the font libraries
 
-FreeMono12pt7b.py : Big fonts
-FreeMono9pt7b.py : Medium fonts
-FreeSansSerif7pt7b.py : Small fonts
+FreeMono12pt7b.py : Big fonts<br/>
+FreeMono9pt7b.py : Medium fonts<br/>
+FreeSansSerif7pt7b.py : Small fonts<br/>
 
-main.py : First example; loaded by default, a test of various routines and a mesaure of the display time
+main.py : First example; loaded by default, a test of various routines and a mesaure of the display time<br/>
+mainfull.py : The example above + touchscreen calibration<br/>
+scroll.py : An example of a scrolling text (The ILI9341 parallel display has a hardware scrolling feature)<br/>
+sdcard.py : Library to use for SD card access (The ILI9341 parallel display has an integrated micro SD card reader)<br/>
+SdcardTimerTest.py : An example to set and display the time and print on screen the content of the SDcard<br/>
 
-mainfull.py : The example above + touchscreen calibration
-
-scroll.py : An example of a scrolling text (The ILI9341 parallel display has a hardware scrolling feature)
-
-sdcard.py : Library to use for SD card access (The ILI9341 parallel display has an integrated micro SD card reader)
-
-SdcardTimerTest.py : An example to set and display the time and print on screen the content of the SDcard
-
-All the examples above start by setting the pins connected to the display (and if needed to the SD card pins) :
+All the examples above start by setting the pins connected to the display (and if needed to the SD card pins)
 
 ## 3. Pin definition
 
