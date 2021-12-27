@@ -98,7 +98,7 @@ What you have to do is copy these paramters in the ILI9341_touch.py library :
  self.coeff_long = results above for Long direction a<br/>
  self.const_long = results above for Long direction b<br/>
  
- and that's it ! See a full video of the process here : https://drive.google.com/file/d/1L7yVWag6e606RgQF5fxj9b6aB8_0982Q/view?usp=sharing
+ and that's it ! See a full video of the process :https://drive.google.com/file/d/1L7yVWag6e606RgQF5fxj9b6aB8_0982Q/view?usp=sharing
  
  ## 5. Using the routines
  
