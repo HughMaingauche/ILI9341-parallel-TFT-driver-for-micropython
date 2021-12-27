@@ -49,25 +49,41 @@ SdcardTimerTest.py : An example to set and display the time and print on screen 
 
 All the examples above start by setting the pins connected to the display (and if needed to the SD card pins) :
 
-# Pin definition for the MCD display
+3.1 Pin definition for the LCD display
 LCD_RD = 2
+
 LCD_WR = 4
+
 LCD_RS = 32   # RS & CS pins must be ADC and OUTPUT
+
 LCD_CS = 33   # for touch capability -> For ESP32 only pins 32 & 33 - For PICO only pins 26,27 & 28
+
 LCD_RST = 22
+
 LCD_D0 = 12
+
 LCD_D1 = 13
+
 LCD_D2 = 26
+
 LCD_D3 = 25
+
 LCD_D4 = 17
+
 LCD_D5 = 16
+
 LCD_D6 = 27
+
 LCD_D7 = 14
 
-# Pin definition for the touchscreen
+3.2 Pin definition for the touchscreen
+
 XP = LCD_D0   #
+
 YM = LCD_D1   #  Those four pins are used for the touchscreen
+
 YP = LCD_CS   #  Please note that CS and RS are the same as for the display above
+
 XM = LCD_RS   #
 
 Except for the RS and CS pins, you can choose any I/O pin, but be aware that to use the SDcard you will need an available SPI, so save at least one set of SPI pins for this !
