@@ -1,4 +1,4 @@
-# ILI9341 parallel driver by vincent
+# ILI9341 parallel driver by Hugh
 # Largely inspired from the MCUFriend arduino library writen in c
 
 from machine import Timer, Pin, ADC
