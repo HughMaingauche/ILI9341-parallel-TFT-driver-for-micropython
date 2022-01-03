@@ -6,6 +6,7 @@ Thank you also to Roberthh on the [micropython forum](https://forum.micropython.
 You'll find 2 different ILI9341 drivers for micropython in this repository :<br/>
 ILI9341_ESP32 -> for use with standard ESP32 microcontroller<br/>
 ILI9341_RP2 -> for use with Raspberry PICO microcontroller<br/>
+ILI9341_RP2_PIO -> for use with Raspberry PICO microcontroller - some improved functions using assembly code - <br/>
 
 For the ESP32, it's working well but I sometime have memory issues, in this case use of gc.collect() might be usefull
 
